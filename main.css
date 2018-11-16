@@ -1,5 +1,6 @@
-body{
-  background-color:tomato;
+html {
+  background: url(pikachu.jpg);
+  background-size: cover;
 }
 img{
   position: relative;
@@ -34,12 +35,16 @@ img{
   top: 70px;
   left: 450px;
   animation-name: rolling;
-  animation-duration: 3s;
-  animation-fill-mode: infinite;
+  animation-duration: 2s;
+  animation-fill-mode:forwards;
 }
 
 @keyframes rolling {
   from{transform :translateX(0)}
   to{transform: translateX(700px)}
+}
 
+#vertical-1{
+  border-style:solid;
+  border-color:black;
 }
