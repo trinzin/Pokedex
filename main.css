@@ -1,10 +1,13 @@
 html {
   background: url(pikachu.jpg);
-  background-size: cover;
+  background-size:contain;
+  padding-bottom: 500px;
 }
-img{
+
+#top{
   position: relative;
   padding:100;
+  width: 500px;
 }
 .topnav{
   background-color: #333;
@@ -39,6 +42,20 @@ img{
   animation-fill-mode:forwards;
 }
 
+
+#rolling{
+  width:75px;
+  height:150px;
+}
+
+/* #top{
+  width: 70px;
+}
+
+#rolling{
+width: 150px;
+
+} */
 @keyframes rolling {
   from{transform :translateX(0)}
   to{transform: translateX(700px)}
@@ -52,5 +69,10 @@ img{
 #product{
   border-style:solid;
   border-color:red;
+}
+
+img{
+  width: 250px;
+  height:250px;
 }
 }
