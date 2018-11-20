@@ -13,49 +13,50 @@ class pokemon{
     //make a div with classname product//
     this.element = document.createElement('div');
     this.element.className='product';
-
-
-
 }
 
 display(){
 
-    let name = document.createElement("ol");
-    name.innerHTML = this.name;
-    this.element.appendChild(name);
 
-    this.container.appendChild(this.element);
-
-    let pokeLife = document.createElement("ol");
-    pokeLife.innerHTML = this.pokeLife;
-    this.element.appendChild(pokeLife);
-
-    this.container.appendChild(this.element);
-
-    let pokeAttack = document.createElement("ol");
-    pokeAttack.innerHTML = this.pokeAttack;
-    this.element.appendChild(pokeAttack);
-
-    this.container.appendChild(this.element);
-
-    let pokeDefense = document.createElement("ol");
-    pokeDefense.innerHTML = this.pokeDefense;
-    this.element.appendChild(pokeDefense);
-
-    this.container.appendChild(this.element);
-
-    let pokeAbilities = document.createElement("ol");
-    this.conatiner2 = document.getElementById('test')
-    pokeAbilities.innerHTML = this.pokeAbilities;
-    this.element.appendChild(pokeAbilities);
+    this.element.style.float="left";
 
     let pic=document.createElement('img');
     pic.src=this.pic;
     this.element.appendChild(pic);
     // document.getElementsById('prodcts').appendChild(pic);
 
+    let name = document.createElement("ul");
+    name.innerHTML = "Name: " + this.name;
+    this.element.appendChild(name);
+
+    this.container.appendChild(this.element);
+
+    let pokeLife = document.createElement("ul");
+    pokeLife.innerHTML ="hp:" + this.pokeLife;
+    this.element.appendChild(pokeLife);
+
+    this.container.appendChild(this.element);
+
+    let pokeAttack = document.createElement("ul");
+    pokeAttack.innerHTML = "Attack:" + this.pokeAttack;
+    this.element.appendChild(pokeAttack);
+
+    this.container.appendChild(this.element);
+
+    let pokeDefense = document.createElement("ul");
+    pokeDefense.innerHTML = "Defense:" + this.pokeDefense;
+    this.element.appendChild(pokeDefense);
+
+    this.container.appendChild(this.element);
+
+    let pokeAbilities = document.createElement("ul");
+    this.conatiner2 = document.getElementById('test')
+    pokeAbilities.innerHTML = "Ability:" + this.pokeAbilities;
+    this.element.appendChild(pokeAbilities);
+
     this.container.appendChild(this.element);
   }
+
 }
 
 //******************************************************************
@@ -118,4 +119,14 @@ axios.get
 
   let skarmory = new pokemon(name, hp, ability, attack, defense,pic);
       skarmory.display();
+      console.log(skarmory)
 });
+
+
+
+class Trainer {
+
+}
+
+let ricky = new Trainer('Ricky')
+console.log(ricky);
