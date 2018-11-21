@@ -29,14 +29,14 @@ table{
   bottom: 30px;
 }
 .topnav{
-  background-color: #333;
+  background-color: #f3bc42;
   overflow: hidden;
   text-align: center;
 }
 
 .topnav a{
   float:left;
-  color:#f2f2f2;
+  color:black;
   padding:14px 16px;
   text-decoration:none;
   font-size: 20px;
@@ -49,7 +49,7 @@ table{
 }
 
 .topnav a.active{
-  background-color: #4caf50;
+  background-color: #f4b342;
   color:white;
 }
 
