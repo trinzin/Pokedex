@@ -1,14 +1,20 @@
 body{
   background: url(palm.jpg) no-repeat center center fixed;
   background-size: cover;
+  border: style: solid;
 }
 
 ul{
   border-style: solid;
   border-color: black;
+  background-color: white;
+}
+table{
+  border-style: solid;
+  border-color: black;
+
 
 }
-
 #ricky{
   width: 250px;
   height: 250px;
@@ -19,8 +25,8 @@ ul{
 
 #top{
   position: relative;
-  padding:100;
   width: 350px;
+  bottom: 30px;
 }
 .topnav{
   background-color: #333;
@@ -34,6 +40,7 @@ ul{
   padding:14px 16px;
   text-decoration:none;
   font-size: 20px;
+  padding-bottom:25px;
 }
 
 .topnav a:hover{
@@ -105,13 +112,14 @@ position: absolute;
 top: 700px;
 display: inline-block;
 left: 250px;
+height: 600px;
 }
 img{
   display: inline-block;
 }
-
 .footer{
   position:fixed;
+  clear: both;
   left:0;
   bottom:0;
   width:100%;

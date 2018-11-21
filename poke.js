@@ -1,4 +1,3 @@
-console.log('🐱‍👓');
 
 class pokemon{
   constructor(name,pokeLife,pokeAttack,pokeDefense,pokeAbilities,pic){
@@ -16,7 +15,6 @@ class pokemon{
 }
 
 display(){
-
 
     this.element.style.float="left";
 
@@ -59,10 +57,37 @@ display(){
 
 }
 
+class Trainer{
+    constructor(){
+      this.pokeInfo = [];
+
+    }
+
+    all(){
+      return this.pokeInfo;
+
+    }
+
+    add (info){
+      this.pokeInfo.push(info);
+    }
+
+    get(momo){
+      for(let i = 0; i < this.pokemon.length;i++){
+        if (momo === this.pokemon[i].name){
+          return this.pokemon[i];
+        }
+      }
+    }
+}
+
+let Rinzin = new Trainer();
+
+
 //******************************************************************
 
 axios.get
-  ("http://fizal.me/pokeapi/api/v2/name/pikachu.json")
+  ("https://fizal.me/pokeapi/api/v2/name/pikachu.json")
     .then (function(response){
 
       let name=response.data.name;
@@ -77,12 +102,14 @@ axios.get
 
       let pic = "pic1.jpg";
 
-    let pikachu = new pokemon(name, hp, ability, attack, defense,pic);
+    let pikachu = new pokemon(name, hp, attack, defense, ability,pic);
     pikachu.display();
+
+    Rinzin.add(pikachu);
 });
 
 axios.get
-  ("http://fizal.me/pokeapi/api/v2/name/charmander.json")
+  ("https://fizal.me/pokeapi/api/v2/name/charmander.json")
     .then (function(response){
 
       let name=response.data.name;
@@ -97,12 +124,14 @@ axios.get
 
       let pic = "charmander1.jpg";
 
-  let charmander = new pokemon(name, hp, ability, attack, defense,pic);
+  let charmander = new pokemon(name, hp, attack, defense, ability, pic);
   charmander.display();
+
+  Rinzin.add(charmander);
 });
 
 axios.get
-  ("http://fizal.me/pokeapi/api/v2/name/skarmory.json")
+  ("https://fizal.me/pokeapi/api/v2/name/skarmory.json")
     .then (function(response){
 
       let name =response.data.name;
@@ -117,16 +146,8 @@ axios.get
 
       let pic = "skarmory.png";
 
-  let skarmory = new pokemon(name, hp, ability, attack, defense,pic);
+  let skarmory = new pokemon(name, hp, attack, defense, ability,pic);
       skarmory.display();
-      console.log(skarmory)
+
+      Rinzin.add(skarmory);
 });
-
-
-
-class Trainer {
-
-}
-
-let ricky = new Trainer('Ricky')
-console.log(ricky);
